@@ -105,7 +105,7 @@ header nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .conteudo-terminal {
@@ -330,6 +330,20 @@ header nav ul li a:hover {
     bottom: 20px;
     right: 20px;
     z-index: 2000;
+    width: 64px;
+    height: 64px;
+    background-image: url('/img/cacodemon-icon-64x64.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+#botaoUp:hover {
+    background-image: url('/img/cacodemon-firing-icon-64x64px.PNG');
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 #sobre {
@@ -511,4 +525,66 @@ footer strong {
     font-style: italic;
     color: #333;
     margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* --- TABLETS E CELULARES MAIORES (até 768px) --- */
+@media (max-width: 768px) {
+    
+    
+    header {
+        flex-direction: column; 
+        height: auto; 
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 10px 0; 
+    }
+
+    header nav ul {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 15px; 
+    }
+
+    
+    header nav ul li a {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    
+    .conteudo-terminal h2 {
+        font-size: 2em; 
+    }
+}
+
+/* --- CELULARES PEQUENOS (até 480px) --- */
+@media (max-width: 480px) {
+
+    
+    .container-form {
+        padding: 15px; 
+    }
+
+    .container-form h2 {
+        font-size: 1.8em;
+    }
+
+    
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    
+    .grid-demonios {
+        grid-template-columns: 1fr; 
+    }
 }
