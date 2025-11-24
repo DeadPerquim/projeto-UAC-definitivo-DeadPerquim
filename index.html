@@ -10,11 +10,15 @@
 </head>
 
 <body>
-    <header> <img src="/img/UAC-logo-cortada-sembg.png" alt="Logo da Página" id="logo">
+    <header>
+        <a href="#terminal" class="logo-link"> 
+            <img src="/img/UAC-logo-cortada-sembg.png" alt="Logo da Página" id="logo">
+        </a>
         <h1>UAC</h1>
         <nav>
             <ul>
                 <li> <a href="#terminal">TERMINAL DE COMANDO</a></li>
+                <li> <a href="#feitos">A CORPORAÇÃO</a></li>
                 <li> <a href="#registro">REGISTRO DE ANOMALIAS</a></li>
                 <li> <a href="#perfil">CREDENCIAIS</a></li>
                 <li> <a href="#contato">RELATAR ANOMALIA</a></li>
@@ -34,43 +38,90 @@
             <p class="alerta-piscando">⚠ AVISO: VIOLAÇÃO DE CONTENÇÃO NO SETOR 4 ⚠</p>
             <p>Status do Sistema: <span id="critico">CRÍTICO</span></p>
 
-            <a href="#divisao-infernal" class="link-proxima-secao">
-                <img id="todown" src="" alt="Descer">
+            <a href="#feitos" class="link-proxima-secao">
+                <img id="todown" src="/img/arrow-downward.png" alt="Descer">
             </a>
         </div>
     </section>
-    <div id="divisao-infernal" class="divisao-parallax">
+    <div id="divisao-1" class="divisao-parallax"> 
         <div class="faixa-texto">
-            <h3>A REALIDADE ESTÁ COLAPSANDO...</h3>
+            <h3>A CIÊNCIA EXIGE SACRIFÍCIOS</h3>
         </div>
     </div>
     <!-- <section id=""></section> -->
+     <section id="feitos">
+        <div class="container-feitos">
+            <h2>NOSSOS FEITOS & PESQUISAS</h2>
+            <p>
+                A Union Aerospace Corporation é a maior entidade corporativa existente. Originalmente focada em mídia e armas, expandimos para a pesquisa biológica, exploração espacial e manipulação dimensional.
+            </p>
+            <p>
+                Nossas instalações em Marte decodificaram a "Energia Argent", uma fonte de energia renovável ilimitada extraída diretamente da fenda dimensional. Embora os críticos chamem de "Inferno", nós chamamos de <strong>Futuro</strong>.
+            </p>
+            <p>
+                <strong>Projeto Lázaro:</strong> Temos orgulho de anunciar avanços na militarização de entidades nativas da dimensão Kadingir. O controle total é apenas uma questão de tempo.
+            </p>
+            
+            <a href="#registro" class="link-proxima-secao botao-continuar"> 
+                <img id="todown" src="/img/arrow-downward.png" alt="Continuar">
+            </a>
+        </div>
+    </section>
+
+    <div id="divisao-2" class="divisao-parallax">
+        <div class="faixa-texto">
+            <h3>ELES ESTÃO AGUARDANDO</h3>
+        </div>
+    </div>
+
     <section id="registro">
         <div class="cabecalho-secao">
             <h2>REGISTRO DE ANOMALIAS</h2>
-            <p>Identificação de ameaças de classe demoníaca.</p>
+            <p>Espécimes catalogados da Dimensão Kadingir.</p>
         </div>
 
         <div class="grid-demonios">
             <div class="demonio-card">
-                <img src="" alt="Imp">
+                <img src="/img/Imp-nova-img-recortada.PNG" alt="Imp">
                 <h4>CODENAME: IMP</h4>
-                <p>Status: Eliminado</p>
+                <p>Status: <span class="status-eliminado">Eliminado</span></p>
             </div>
             <div class="demonio-card">
-                <img src="" alt="Cacodemon">
+                <img src="/img/Cacodemon-nova-img.png" alt="Cacodemon">
                 <h4>CODENAME: CACODEMON</h4>
-                <p>Status: Ativo</p>
+                <p>Status: <span class="status-ativo">Ativo</span></p>
             </div>
             <div class="demonio-card">
-                <img src="" alt="Baron of Hell">
+                <img src="/img/Baron_of_Hell_29.png" alt="Baron of Hell">
                 <h4>CODENAME: Baron</h4>
-                <p>Status: Fugitivo</p>
+                <p>Status: <span class="status-fugitivo">Fugitivo</span></p>
+            </div>
+            <div class="demonio-card">
+                <img src="img/Pinky-1.png" alt="Pinky">
+                <h4>CODENAME: PINKY</h4>
+                <p>Ameaça: Blindagem Frontal</p>
+            </div>
+
+            <div class="demonio-card">
+                <img src="/img/Doom-eternal-revenant.png" alt="Revenant">
+                <h4>CODENAME: REVENANT</h4>
+                <p>Ameaça: Artilharia Móvel</p>
+            </div>
+
+            <div class="demonio-card">
+                <img src="/img/DE_MANCUBUS_HERO_1920x870.pngz" alt="Mancubus">
+                <h4>CODENAME: MANCUBUS</h4>
+                <p>Ameaça: Bio-Toxina</p>
             </div>
         </div>
     </section>
-    <section id="perfil"></section>
-    <section id="contato"></section>
+    <section id="perfil" class="secao-placeholder">
+        </section>
+    <section id="contato" class="secao-placeholder">
+        </section>
+    <a href="#terminal" id="botaoUp" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 2000;">
+        <img src="/img/video-game.png" width="50px">
+    </a>
 </body>
 
 </html>

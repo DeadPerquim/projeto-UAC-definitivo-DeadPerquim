@@ -2,6 +2,9 @@ html {
     scroll-behavior: smooth;
 }
 
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
@@ -20,10 +23,16 @@ header {
     background-color: rgba(18, 18, 18, 0.85);
     width: 100%;
     padding: 5px 20px;
+    flex-wrap: wrap;
     font-size: 28px;
     gap: 15px;
     justify-content: space-between;
     z-index: 1000;
+}
+
+.logo-link {
+    display: block;
+    cursor: pointer;
 }
 
 #logo {
@@ -45,13 +54,13 @@ header nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 25px;
+    gap: 40px;
 }
 
 header nav ul li a {
     text-decoration: none;
     color: #00FF00;
-    font-size: 16px;
+    font-size: 14px;
     transition: color 0.3s;
     text-transform: uppercase;
 }
@@ -95,7 +104,7 @@ header nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.85);
 }
 
 .conteudo-terminal {
@@ -136,6 +145,11 @@ header nav ul li a:hover {
     transform: scale(1.2);
 }
 
+.botao-continuar {
+    position: relative;
+    margin-top: 20px;
+}
+
 #todown {
     filter: invert(1);
     width: 40px;
@@ -143,8 +157,7 @@ header nav ul li a:hover {
 }
 
 .divisao-parallax {
-    height: 300px;
-    background-image: url();
+    height: 50vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -152,8 +165,55 @@ header nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 2px solid #333;
-    border-bottom: 2px solid #333;
+    border-top: 3px solid #FF0000;
+    border-bottom: 3px solid #FF0000;
+}
+
+#divisao-1 {
+    background-image: url('//img/doom-background.png');
+}
+
+#divisao-2 {
+    background-image: url('/img/doom-souls-og-bg-gray.png');
+    border-color: #00FF00;
+}
+
+#feitos {
+    min-height: 100vh;
+    background-image: url('/img/UAC-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.container-feitos {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border: 1px solid #00FF00;
+    max-width: 800px;
+    text-align: justify;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.container-feitos h2 {
+    color: #00FF00;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.container-feitos p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #ccc;
 }
 
 .faixa-texto h3 {
@@ -167,16 +227,21 @@ header nav ul li a:hover {
 }
 
 #registro {
-    background-color: #0a0a0a;
+    background-image: url('/img/doom-background.png');
+    background-repeat: repeat;
+    background-size: contain; 
     min-height: 100vh;
-    padding: 100px 20px; 
+    padding: 100px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-top: 5px solid #000;
 }
 
 .cabecalho-secao {
-    text-align: center;
+    background-color: #000;
+    padding: 20px;
+    border: 1px solid red;
     margin-bottom: 50px;
 }
 
@@ -190,14 +255,14 @@ header nav ul li a:hover {
 
 .grid-demonios {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
 }
 
 .demonio-card {
-    background: #141414;
+    background: rgba(20, 20, 20, 0.95);
     border: 1px solid #333;
     padding: 15px;
     text-align: center;
@@ -218,10 +283,30 @@ header nav ul li a:hover {
     margin-bottom: 15px;
 }
 
-.demonio-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 2px solid #333;
-    margin-bottom: 15px;
+.demonio-card h4 {
+    color: #FFF;
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.demonio-card p {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.status-eliminado { color: red; }
+.status-ativo { color: orange; }
+.status-fugitivo { color: red; }
+
+.secao-placeholder {
+    height: 100vh;
+    background: #111;
+}
+
+#botaoUp {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2000;
 }
