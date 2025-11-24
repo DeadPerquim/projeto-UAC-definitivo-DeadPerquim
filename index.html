@@ -20,7 +20,7 @@
                 <li> <a href="#terminal">TERMINAL DE COMANDO</a></li>
                 <li> <a href="#feitos">A CORPORAÇÃO</a></li>
                 <li> <a href="#registro">REGISTRO DE ANOMALIAS</a></li>
-                <li> <a href="#perfil">CREDENCIAIS</a></li>
+                <li> <a href="#sobre">CREDENCIAIS</a></li>
                 <li> <a href="#contato">RELATAR ANOMALIA</a></li>
             </ul>
         </nav>
@@ -114,14 +114,91 @@
                 <p>Ameaça: Bio-Toxina</p>
             </div>
         </div>
+
+        <a href="#sobre" class="link-proxima-secao">
+            <img id="todown" src="/img/arrow-downward.png" alt="Ir para Sobre">
+        </a>
     </section>
-    <section id="perfil" class="secao-placeholder">
-        </section>
-    <section id="contato" class="secao-placeholder">
-        </section>
-    <a href="#terminal" id="botaoUp" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 2000;">
+
+    <section id="sobre">
+        <div class="container-texto-sobre">
+            <h2>NOSSOS IDEAIS</h2>
+            <h3>"O CAMINHO PARA UM AMANHÃ MAIS SEGURO"</h3>
+            <p>
+                A UAC não é apenas uma empresa de energia ou armamento. Nós somos os arquitetos do futuro da humanidade. 
+                Através do sacrifício e da determinação, transformamos o impossível em recurso.
+            </p>
+            <p>
+                Nossa filosofia é simples: <strong>O progresso não tem freios.</strong>
+                Seja na Terra, em Marte ou além, a UAC está comprometida em resolver a crise energética, 
+                custe o que custar. Nossos cientistas trabalham 24 horas por dia para garantir que 
+                a barreira entre as dimensões permaneça... <em>lucrativa</em>.
+            </p>
+            
+            <a href="#contato" class="link-proxima-secao">
+                <img id="todown" src="/img/arrow-downward.png" alt="Ir para Contato">
+            </a>
+        </div>
+    </section>
+
+    <div id="divisao-3" class="divisao-parallax">
+        <div class="faixa-texto">
+            <h3>RELATÓRIO DE INCIDENTE OBRIGATÓRIO</h3>
+        </div>
+    </div>
+
+    <section id="contato">
+        <div class="container-form">
+            <h2>RELATAR ANOMALIA</h2>
+            <p>Protocolo de Segurança Nível 5. Preencha todos os dados.</p>
+
+            <form action="#" method="post">
+                <div class="form-grid">
+                    
+                    <div class="form-group">
+                        <label for="nome">NOME:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Ex: Samuel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sobrenome">SOBRENOME:</label>
+                        <input type="text" id="sobrenome" name="sobrenome" placeholder="Ex: Hayden" required>
+                    </div>
+
+                    <div class="form-group span-2"> <label for="pais">LOCALIZAÇÃO / PAÍS:</label>
+                        <select id="pais" name="pais" required>
+                            <option value="" disabled selected>Selecione a base de origem...</option>
+                            <option value="terra">Terra (Estados Unidos / UAC Global)</option>
+                            <option value="marte">Marte (Instalação Argent)</option>
+                            <option value="fobos">Lua Phobos (Base de Comunicação)</option>
+                            <option value="desconhecido">Localização Classificada / Kadingir</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group span-2">
+                        <label for="mensagem">DESCRIÇÃO DA ANOMALIA:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva o incidente demoníaco..." required></textarea>
+                    </div>
+
+                    <div class="form-group span-2">
+                        <button type="submit" class="botao-enviar">ENVIAR RELATÓRIO</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2150 Union Aerospace Corporation. Todos os direitos reservados.</p>
+        <p class="footer-small">"A UAC não se responsabiliza por possessão demoníaca ou perda de alma durante o expediente."</p>
+        <p>Desenvolvido por <strong>DeadPerquim</strong></p>
+    </footer>
+
+    <a href="#terminal" id="botaoUp">
         <img src="/img/video-game.png" width="50px">
     </a>
+
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
