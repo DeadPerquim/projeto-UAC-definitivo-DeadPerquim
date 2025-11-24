@@ -1,3 +1,6 @@
+/* CONTROLE DO BOTÃO "SCROLL TO TOP"
+    Monitora a rolagem da página para mostrar/esconder o botão*/
+
 document.addEventListener("scroll", verificaBotao);
 
 function verificaBotao() {

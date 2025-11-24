@@ -1,3 +1,4 @@
+/* RESET E CONFIGURAÇÕES GERAIS (GLOBAL)*/
 html {
     scroll-behavior: smooth;
 }
@@ -14,6 +15,7 @@ body {
     overflow-x: hidden;
 }
 
+/* ESTILOS DO CABEÇALHO (HEADER) */
 header {
     position: fixed;
     top: 0;
@@ -71,6 +73,7 @@ header nav ul li a:hover {
     text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
 }
 
+/* SEÇÃO TERMINAL (VÍDEO DE FUNDO) */
 #terminal {
     position: relative;
     height: 100vh;
@@ -151,12 +154,13 @@ header nav ul li a:hover {
     margin-top: 20px;
 }
 
-#todown {
+.todown {
     filter: invert(1);
     width: 40px;
     height: auto;
 }
 
+/* EFEITOS PARALLAX (DIVISORES DE SEÇÃO) */
 .divisao-parallax {
     height: 50vh;
     background-attachment: fixed;
@@ -179,6 +183,7 @@ header nav ul li a:hover {
     border-color: #00FF00;
 }
 
+/* SEÇÃO FEITOS (TEXTOS E FUNDO) */
 #feitos {
     min-height: 100vh;
     background-image: url('/img/UAC-bg.png');
@@ -232,6 +237,7 @@ header nav ul li a:hover {
     text-transform: uppercase;
 }
 
+/* SEÇÃO REGISTRO (CARDS E GRID DOS DEMÔNIOS) */
 #registro {
     background-image: url('/img/doom-background.png');
     background-repeat: repeat;
@@ -319,11 +325,7 @@ header nav ul li a:hover {
 .status-ativo { color: orange; }
 .status-fugitivo { color: red; }
 
-.secao-placeholder {
-    height: 100vh;
-    background: #111;
-}
-
+/* BOTÃO "VOLTAR AO TOPO" (ANIMAÇÃO CACODEMON) */
 #botaoUp {
     display: none;
     position: fixed;
@@ -346,6 +348,7 @@ header nav ul li a:hover {
     cursor: pointer;
 }
 
+/* SEÇÃO SOBRE (ESTILO FUTURISTA) */
 #sobre {
     background-color: #0f0f0f; 
     background-image: url('/img/UAC-salao-futurista.png'); 
@@ -415,6 +418,7 @@ header nav ul li a:hover {
     border-top: 5px solid red;
 }
 
+/* SEÇÃO CONTATO (FORMULÁRIO E INPUTS) */
 .container-form {
     background: #000;
     border: 2px solid #333;
@@ -495,6 +499,7 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 15px #f00;
 }
 
+/* RESPONSIVIDADE (MEDIA QUERIES - CELULAR/TABLET) */
 @media (max-width: 600px) {
     .form-grid {
         grid-template-columns: 1fr;
@@ -504,6 +509,7 @@ input:focus, select:focus, textarea:focus {
     }
 }
 
+/* RODAPÉ (FOOTER) */
 footer {
     background-color: #050505;
     color: #555;
@@ -530,6 +536,18 @@ footer strong {
 input, select, textarea {
     width: 100%;
     max-width: 100%;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 /* --- TABLETS E CELULARES MAIORES (até 768px) --- */
