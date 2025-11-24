@@ -1,26 +1,43 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    margin: 0;
+    padding: 0;
     background-color: black;
     color: #00FF00;
     font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden;
 }
 
 header {
     position: fixed;
     top: 0;
+    left: 0;
     display: flex;
     align-items: center;
-    background-color: #121212;
+    background-color: rgba(18, 18, 18, 0.85);
     width: 100%;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 28px;
     gap: 15px;
     justify-content: space-between;
+    z-index: 1000;
+}
+
+#logo {
+    display: block;
+    height: 80px;
+    width: auto;
+    object-fit: contain;
 }
 
 header h1 {
     font-size: 24px;
     color: #00FF00;
-    margin-right: 50px;
+    margin-right: auto;
+    margin-left: 20px;
 }
 
 header nav ul {
@@ -31,47 +48,180 @@ header nav ul {
     gap: 25px;
 }
 
-header nav header ul li a {
+header nav ul li a {
     text-decoration: none;
     color: #00FF00;
     font-size: 16px;
-    transition: color 0.3;
+    transition: color 0.3s;
+    text-transform: uppercase;
 }
 
 header nav ul li a:hover {
-    color: #00FF00;
-    text-shadow: 0 0 5px rgba(red, 0, 0, 0.7);
-}
-
-#logo {
-    display: block;
-    width: 60%;
-    max-width: 420px;
-    height: auto;
-    object-fit: contain;
+    color: #FF0000;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
 }
 
 #terminal {
-    height: 100vh;
-    padding-top: 130px;
     position: relative;
-    overflow: hidden;
+    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding-top: 0;
+    overflow: hidden;
+}
+
+.area-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 #video-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    opacity: 0.15;
+}
+
+.sobreposicao-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.conteudo-terminal {
+    z-index: 1;
+    padding: 20px;
+}
+
+.conteudo-terminal h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00FF00;
+}
+
+.alerta-piscando {
+    color: #FF0000;
+    font-weight: bold;
+    font-size: 1.2em;
+    animation: piscar 1s infinite;
+}
+#critico {
+    color: red;
+    font-weight: bold;
+}
+
+@keyframes piscar {
+    0% { opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.link-proxima-secao {
+    display: inline-block;
+    margin-top: 30px;
+    transition: transform 0.3s;
+}
+
+.link-proxima-secao:hover {
+    transform: scale(1.2);
+}
+
+#todown {
+    filter: invert(1);
+    width: 40px;
+    height: auto;
+}
+
+.divisao-parallax {
+    height: 300px;
+    background-image: url();
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+
+.faixa-texto h3 {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FF0000;
+    padding: 15px 30px;
+    border: 2px solid #FF0000;
+    font-size: 1.5em;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#registro {
+    background-color: #0a0a0a;
+    min-height: 100vh;
+    padding: 100px 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cabecalho-secao {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cabecalho-secao h2 {
+    font-size: 2.5em;
+    color: #FFF;
+    border-bottom: 3px solid #00FF00;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.grid-demonios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.demonio-card {
+    background: #141414;
+    border: 1px solid #333;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.demonio-card:hover {
+    border-color: #FF0000;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+.demonio-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #333;
+    margin-bottom: 15px;
+}
+
+.demonio-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #333;
+    margin-bottom: 15px;
 }
