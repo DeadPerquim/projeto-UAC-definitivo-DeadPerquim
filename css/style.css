@@ -3,6 +3,7 @@ body {
     color: #00FF00;
     font-family: 'Courier New', Courier, monospace;
 }
+
 header {
     position: fixed;
     top: 0;
@@ -10,13 +11,67 @@ header {
     align-items: center;
     background-color: #121212;
     width: 100%;
-    padding: 15px 20px;
+    padding: 10px 20px;
     font-size: 28px;
     gap: 15px;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #00FF00;
+    margin-right: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+}
+
+header nav header ul li a {
+    text-decoration: none;
+    color: #00FF00;
+    font-size: 16px;
+    transition: color 0.3;
+}
+
+header nav ul li a:hover {
+    color: #00FF00;
+    text-shadow: 0 0 5px rgba(red, 0, 0, 0.7);
 }
 
 #logo {
-    height: 100px;
-    width: 100px;
+    display: block;
+    width: 60%;
+    max-width: 420px;
+    height: auto;
+    object-fit: contain;
 }
 
+#terminal {
+    height: 100vh;
+    padding-top: 130px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 0.15;
+}
